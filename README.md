@@ -1,2 +1,3 @@
 # recipeApp
-js, html, css
+js, html, css.
+Assignment learning stuff.
