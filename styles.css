@@ -1,0 +1,171 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.enter {
+    position: center
+}
+
+nav {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    left: 0;
+    color: rgb(59, 247, 2);
+    text-align: center;
+}
+    
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 150px 5%;
+}
+
+
+
+.ingredients-grid  {
+    display: grid;
+    justify-content: left;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(9, 100px);
+}
+ 
+.servings {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #01f516;
+    width: 15%
+}
+
+.left-column {
+    display: flex;
+    width: 80%;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, 0.974);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .servings {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+  }
+  
+  .output .ingredients-grid {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+.review-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(2, 20px);
+    grid-template-rows: minmax(120px, auto) repeat(8, 100px); 
+}
+
+
+    
+.right-column {
+    width: 20%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+    
+label {
+    margin-bottom: 10px;
+}
+
+input[type="text"], textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #01f516;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.533);
+    color: #09ee09;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#review-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+    
+#no-reviews {
+    display: flex;
+    background-color: #010201;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 44px;
+}
+
+.review {
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 15, 2, 0.2);
+    }
+    
+.review h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+    
+.review ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.review ul li {
+    margin-bottom: 5px;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+    
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+
+
