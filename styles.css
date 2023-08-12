@@ -30,7 +30,7 @@ nav {
     margin: 150px 5%;
 }
 
-.ingredient{
+.ingredients{
     display: flex;
     flex-wrap: nowrap;
 }
@@ -45,6 +45,8 @@ nav {
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: minmax(120px, auto) repeat(9, 100px);
 }
+
+
  
 .servings {
     padding: 10px;
@@ -60,10 +62,9 @@ nav {
 }
 
 .output {
-    grid-column: 1 / -1;
+    grid-column: 1 / 4;
     background-color: rgba(230, 222, 222, 0.974);
     display: flex;
-    align-items: flex-end;
     justify-content: space-around;
     flex-direction: column;
     padding: 10px;
@@ -72,9 +73,14 @@ nav {
 }
 
 .output .servings {
-    color: rgba(255, 255, 255, .75);
+    color: rgba(22, 22, 22, 0.75);
     font-size: 1.5rem;
   }
+
+.output .ingredients {
+    color: rgba(22, 22, 22, 0.75);
+    font-size: 1.5rem;
+}
   
   .output .ingredients-grid {
     color: white;
