@@ -2,44 +2,82 @@ class Recipe {
     constructor(servings) {
         this.servings = servings;
     }
-    
-    calculateIngredientValue(ingredientValue) {
-        return ingredientValue / 24 * this.servings;
+
+    calculateIngredientValue(amount) {
+        return amount / 24 * this.servings;
     }
-    
+
     generateIngredientList() {
         let ingredientList = '';
-        
-        ingredients.forEach((item) => {
-            const ingredientValue = this.calculateIngredientValue(item.value);
-            ingredientList += `<li>${item.key}: ${ingredientValue}</li>`;
+
+        ingredients.forEach((ingredient) => {
+            const ingredientValue = this.calculateIngredientValue(ingredient.amount);
+            ingredientList += `<li>${ingredient.ingredient}: ${ingredientValue}: ${ingredient.unit}</li>`;
         });
-        
+
         return ingredientList;
     }
 
     display() {
-        servingsBtn.addEventListener("click", () => {
-            ingredientsTextElement.innerHTML = this.generateIngredientList();
-        });
+        const ingredientList = this.generateIngredientList();
+        ingredientsTextElement.innerHTML = ingredientList;
     }
 }
 
-const servingsBtn = document.getElementById("servingsBtn");
+const ingredients = [
+    {
+        ingredient: 'Roasted nuts',
+        amount: 100,
+        unit: 'g'
+    },
+    {
+        ingredient: 'Butter',
+        amount: 250,
+        unit: 'g'
+    },
+    {
+        ingredient: 'Cacao',
+        amount: 2,
+        unit: 'dl'
+    },
+    {
+        ingredient: 'Sugar',
+        amount: 4.5,
+        unit: 'dl'
+    },
+    {
+        ingredient: 'Egg',
+        amount: 4,
+        unit: 'pcs'
+    },
+    {
+        ingredient: 'Salt',
+        amount: 2,
+        unit: 'teaspoon'
+    },
+    {
+        ingredient: 'Vanilla powder',
+        amount: 2,
+        unit: 'pinch'
+    },
+    {
+        ingredient: 'Flour',
+        amount: 3,
+        unit: 'dl'
+    },
+    {
+        ingredient: 'Baking soda',
+        amount: 0.5,
+        unit: 'teaspoon'
+    }
+];
+
+const servings = document.querySelector("input");
+const log = document.getElementById("value");
 const ingredientsTextElement = document.getElementById('ingredient');
 const recipeList = document.querySelectorAll('[ingredients]');
-
-const ingredients = new Map([
-    ['Roasted nuts', 100],
-    ['Butter', 250],
-    ['Cacao', 2],
-    ['Sugar', 4.5],
-    ['Egg', 4],
-    ['Salt', 2],
-    ['Vanilla powder', 2],
-    ['Flour', 3],
-    ['Baking soda', 0.5]
-]);
-
 const recipe = new Recipe(1);
+
+
+
 recipe.display();
