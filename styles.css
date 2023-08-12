@@ -13,7 +13,7 @@ body {
 }
 
 nav {
-    background-color: #000000;
+    background-color: #f1eaea;
     position: fixed;
     top: 0;
     width: 100%;
@@ -28,6 +28,11 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     margin: 150px 5%;
+}
+
+.ingredient{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 
@@ -56,7 +61,7 @@ nav {
 
 .output {
     grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, 0.974);
+    background-color: rgba(230, 222, 222, 0.974);
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
@@ -111,7 +116,7 @@ input[type="text"], textarea {
 
 button[type="submit"] {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.533);
+    background-color: rgba(231, 225, 225, 0.533);
     color: #09ee09;
     border: none;
     border-radius: 5px;
@@ -126,7 +131,7 @@ button[type="submit"] {
     
 #no-reviews {
     display: flex;
-    background-color: #010201;
+    background-color: #f2f8f2;
     padding: 20px;
     border-radius: 8px;
     margin-top: 44px;
