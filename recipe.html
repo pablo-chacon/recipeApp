@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
   <link rel="stylesheet" href="styles.css">
+  <script src="recipe.js"></script>   
 </head>
   <nav>
     <h1>Brownie Base recipe.</h1>
@@ -18,23 +18,20 @@
     <div class="container">
       <h4>Ingredienser:</h4>
       <div class="left-column">
-        <ul>
-          <div class="output">
-            <label for="ingredients">Servings:</label>
-            <input id="servings" type="number" value="24"><br>
-            <button type="submit" id="servingsBtn" onclick="ingredients()" name="servings">update recipe</button>
-          </div>
-          <li ingredients id="ingredient"><p>Rostade hasselnötter:</li>
-          <li ingredients id="ingredient">Smör</li>
-          <li ingredients id="ingredient">Kakao</li>
-          <li ingredients id="ingredient">Strösocker</li>
-          <li ingredients id="ingredient">Ägg</li>
-          <li ingredients id="ingredient">Salt</li>
-          <li ingredients id="ingredient">Vaniljpulver</li>
-          <li ingredients id="ingredient">Vetemjöl</li>
-          <li ingredients id="ingredient">Bakpulver</li>
-        </ul>
-
+        <div class="output">
+          <input id="servings" type="number" value="24">
+          <ul id="ingredients">
+            <li ingredient></li>
+            <li ingredients id="ingredient">Smör</li>
+            <li ingredients id="ingredient">Kakao</li>
+            <li ingredients id="ingredient">Strösocker</li>
+            <li ingredients id="ingredient">Ägg</li>
+            <li ingredients id="ingredient">Salt</li>
+            <li ingredients id="ingredient">Vaniljpulver</li>
+            <li ingredients id="ingredient">Vetemjöl</li>
+            <li ingredients id="ingredient">Bakpulver</li>
+          </ul>  
+      </div>
         <ul>
           <li>Sätt ugnen på 175°.</li>
           <li>Hacka nötterna. Smält smöret och rör ner kakao.</li>
@@ -58,6 +55,6 @@
       </div>
       </div>         
     </div>
-    <script src="app.js"></script>   
+    
   </body>
 </html>
