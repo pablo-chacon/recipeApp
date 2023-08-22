@@ -76,7 +76,7 @@ const servings = document.querySelector("input");
 const log = document.getElementById("value");
 const ingredientsTextElement = document.getElementById('ingredient');
 const recipeList = document.querySelectorAll('[ingredients]');
-const recipe = new Recipe(1);
+const recipe = new Recipe();
 
 
 
