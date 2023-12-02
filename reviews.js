@@ -1,8 +1,8 @@
 $(document).ready(function() {
-    // Array to store user reviews
+    // Array user reviews
     var reviews = [];
 
-    // Function to display reviews
+    // display reviews
     function displayReviews() {
         $('#reviewsList').empty();
         for (var i = 0; i < reviews.length; i++) {
@@ -12,7 +12,7 @@ $(document).ready(function() {
         }
     }
 
-    // Function to add a new review
+    // add newreview
     function addReview(name, review) {
         var newReview = {
             name: name,
@@ -22,7 +22,7 @@ $(document).ready(function() {
         displayReviews();
     }
 
-    // Submit event for adding a review
+    // Submit event
     $('#addReviewForm').submit(function(e) {
         e.preventDefault();
         var name = $('#name').val();
