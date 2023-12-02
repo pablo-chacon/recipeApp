@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>Brownie Base recipe.</h1>
+        <a href="https://www.arla.se/recept/brownie/">Original recipe.</a><br>
+        <a href="recipe.html">Recipe.</a><br>
+        <a href="index.html">Back to start page.</a>
+      </nav>
+    <!-- Header Section -->
+    <header class="bg-dark text-white text-center p-4">
+        Reviews
+    </header>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>User Reviews</h2>
+                <ul id="reviewsList" class="list-group mt-4">
+                    <li class="list-group-item">Awesome brownies.</li>
+                </ul>
+                <form id="addReviewForm" class="mt-4">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review">Review:</label>
+                        <textarea class="form-control" id="review" placeholder="Enter your review" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="reviews.js"></script>
+</body>
+</html>
